@@ -26,7 +26,7 @@ jobs:
           git clone https://JuckyLee668:${{ secrets.PUSH_KEY }}@github.com/JuckyLee668/Note_with_vitePress.git
           cd Note_with_vitePress
           mkdir -p note
-          cp -r ../vitepress/dist/* note/
+          cp -r ../.vitepress/dist/* note/
           git add note
           git commit -m "github action auto push"
           git push origin main
