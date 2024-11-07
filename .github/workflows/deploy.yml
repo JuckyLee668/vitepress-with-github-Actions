@@ -21,9 +21,11 @@ jobs:
         run: |
           git config user.name JuckyLee668
           git config user.email 2794920709@qq.com
-          git add ./.vitepress/dist
+          git remote add target https://github.com/JuckyLee668/Note_with_vitePress.git
+          mkdir -p note
+          cp -r ./vitepress/dist/* note/
+          git add note
           git commit -m "github action auto push"
-          git switch -c dist
-          git push -f origin dist
+          git push -f target main
         env: # PUSH 权限要求
           GITHUB_TOKEN: ${{ secrets.PUSH_KEY }}
