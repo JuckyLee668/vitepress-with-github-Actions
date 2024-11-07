@@ -23,8 +23,8 @@ jobs:
         run: |
           git config --global user.email "2794920709@qq.com"
           git config --global user.name "JuckyLee668"
-          git clone https://JuckyLee668:${{ secrets.PUSH_KEY }}@github.com/JuckyLee668/Note_with_vitePress.git
-          cd Note_with_vitePress
+          git clone https://JuckyLee668:${{ secrets.PUSH_KEY }}@github.com/JuckyLee668/vv.git
+          cd vv
           mkdir -p note
           cp -r ../.vitepress/dist/* note/
           git add note
