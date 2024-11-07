@@ -19,7 +19,7 @@ jobs:
         run: |
           git config user.name JuckyLee668
           git config user.email 2794920709@qq.com
-          git add .
+          git add ./.vitepress/dist
           git commit -m "github action auto push"
           git switch -c dist
           git push -f origin dist
