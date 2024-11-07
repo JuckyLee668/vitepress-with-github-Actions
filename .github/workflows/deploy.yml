@@ -19,9 +19,9 @@ jobs:
         run: |
           git config user.name JuckyLee668
           git config user.email 2794920709@qq.com
-        run: git add .
-        run: git commit -m "github action auto push"
-        run: git switch -c dist
-        run: git push -f origin dist
+      - run: git add .
+      - run: git commit -m "github action auto push"
+      - run: git switch -c dist
+      - run: git push -f origin dist
         env: # PUSH 权限要求
           github_token: ${{ secrets.PUSH_KEY }}
