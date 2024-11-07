@@ -1,18 +1,27 @@
-name: GitHub Actions Demo
+name: GitHub Actions test
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 # 指定node版本
+      - name: Build
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          cd / # 进入前端侧的工程目录
+          npm add -D vitepress # 安装依赖
+          npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）​
+      - name: Push
+        run: |
+          git config user.name JuckyLee668
+          git config user.email 2794920709@qq.com
+        run: git add .
+        run: git commit -m "github action auto push"
+        run: git switch -c dist
+        run: git push -f origin dist
+        env: # PUSH 权限要求
+          github_token: ${{ secrets.PUSH_KEY }}
