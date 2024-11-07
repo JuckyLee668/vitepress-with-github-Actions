@@ -21,8 +21,8 @@ jobs:
         env: # PUSH 权限要求
           GITHUB_TOKEN: ${{ secrets.PUSH_KEY }}
         run: |
-          git config user.name JuckyLee668
-          git config user.email 2794920709@qq.com
+          git config --global user.email "2794920709@qq.com"
+          git config --global user.name "JuckyLee668"
           git clone https://JuckyLee668:${{ secrets.PUSH_KEY }}@github.com/JuckyLee668/Note_with_vitePress.git
           cd Note_with_vitePress
           mkdir -p note
