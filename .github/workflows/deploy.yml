@@ -26,4 +26,4 @@ jobs:
           git switch -c dist
           git push -f origin dist
         env: # PUSH 权限要求
-          github_token: ${{ secrets.PUSH_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PUSH_KEY }}
