@@ -14,7 +14,7 @@ jobs:
         run: |
           cd / # 进入前端侧的工程目录
           npm add -D vitepress # 安装依赖
-          npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）​
+          # npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）​
       - name: Push
         run: |
           git config user.name JuckyLee668
