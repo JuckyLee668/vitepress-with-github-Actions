@@ -40,7 +40,8 @@ export default defineConfig({
             { text: 'latex初级入门', link: '/docs/latex' },
             { text: 'latex cls文件编写教程', link: '/docs/latexcls' },
             { text: 'Linux', link: '/docs/linuxnew' },
-            { text: 'HarmonyNext UI', link: '/docs/harmonyNextUI' }
+            { text: 'HarmonyNext UI', link: '/docs/harmonyNextUI' },
+            { text: 'Openharmony 编译', link: '/docs/openharmony' }
           ]
         }
       ],
