@@ -85,10 +85,16 @@ hb build
 ```
 # 列出所有的容器
 docker container ls --all
+```
+```
 # 根据列出的容器，选择对应的containerID
 docker container start [containerID]
+```
+```
 # 接入到容器中
 docker container attach [containerID]
+```
+```
 # 删除容器
 docker rm [containerID]
 ```
