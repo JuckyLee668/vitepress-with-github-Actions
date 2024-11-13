@@ -1,4 +1,17 @@
 # OpenHarmony SDK编译手册 
+
+```
+openharmony 设备开发文档
+https://docs.openharmony.cn/pages/v4.1/zh-cn/device-dev/device-dev-guide.md
+```
+```
+#OpenHarmony 版本概述 
+https://gitee.com/openharmony/docs/blob/master/zh-cn/release-notes/OpenHarmony-v5.0.0-release.md
+```
+```
+#github 文档集合
+https://github.com/fenwii/OpenHarmony/tree/master
+```
 ##  源码获取
 ### 通过rope获取
 ```
@@ -76,10 +89,13 @@ docker container ls --all
 docker container start [containerID]
 # 接入到容器中
 docker container attach [containerID]
+# 删除容器
+docker rm [containerID]
 ```
 ## 常见问题
 ### Code: 4000
 可能原因：因为Linux-5.10内核中开启了 CONFIG_DEBUG_INFO_BTF=y 调试项，这个项会在编译过程调用pahole工具去分析整个内核，这个过程需要大量内存，内存耗内导致编译失败。
+
 解决方法：在目录`//kernel/linux/config/linux-5.10/rk3568/arch/arm64_defconfig`下找到arm64_defconfig文件，找到CONFIG_DEBUG_INFO_BTF=y这一行，前面加上#注释掉即可
 
 
