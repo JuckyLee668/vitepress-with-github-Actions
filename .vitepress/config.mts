@@ -42,7 +42,7 @@ export default defineConfig({
             { text: 'Linux', link: '/docs/linuxnew' },
             { text: 'HarmonyNext UI', link: '/docs/harmonyNextUI' },
             { text: 'Openharmony 编译', link: '/docs/openharmony' },
-	          { text: 'Openharmony 编译', link: '/docs/MQTT' }
+	    { text: 'MQTT协议', link: '/docs/MQTT' }
           ]
         }
       ],
