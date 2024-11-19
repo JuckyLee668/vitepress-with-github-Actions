@@ -16,7 +16,10 @@ jobs:
       - name: Install vitepress
         run: npm add -D vitepress # 安装依赖
       - name: Build
-        run: npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）
+        run: |
+          chmod +x filelinker.sh
+          ./filerlinker.sh
+          npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）
       - name: Push
         env: # PUSH 权限要求
           GITHUB_TOKEN: ${{ secrets.PUSH_KEY }}
