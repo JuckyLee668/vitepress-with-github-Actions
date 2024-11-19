@@ -38,7 +38,7 @@ temp_file="temp.js"
 > "$temp_file"
 
 function docs(){
-    directory="docs"
+    directory="../docs"
 
     files=("$directory"/*)
     file_count=${#files[@]} # 文件总数
@@ -79,7 +79,7 @@ function docs(){
 }
 
 function tools(){
-    directory="tools"
+    directory="../tools"
 
     files=("$directory"/*)
     file_count=${#files[@]} # 文件总数
