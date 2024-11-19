@@ -140,7 +140,7 @@ docs
 tools
 etitle
 
-target_file=".vitepress/config.mts"
+target_file="config.mts"
 
 mv "$temp_file" "$target_file"
 
