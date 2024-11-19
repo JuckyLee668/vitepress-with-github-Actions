@@ -17,8 +17,8 @@ jobs:
         run: npm add -D vitepress # 安装依赖
       - name: Build
         run: |
-          chmod +x filelinker.sh
-          ./filerlinker.sh
+          chmod +x ./.vitepress/filelinker.sh
+          ./.vitepress/filelinker.sh
           npm run docs:build # 打包前端代码到生产环境（目标路径为：server/public）
       - name: Push
         env: # PUSH 权限要求
