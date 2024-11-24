@@ -1,7 +1,7 @@
 # nginx 配置
 
 ## ssl配置
-###
+### certbot 安装
 ```bash
 sudo apt install -y certbot
 sudo apt install python3-certbot-nginx //安装依赖
